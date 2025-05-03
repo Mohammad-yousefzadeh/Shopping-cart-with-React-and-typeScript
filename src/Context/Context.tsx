@@ -32,7 +32,7 @@ export const context = createContext({} as ShoppingCartPropperties)
 const ContextProvider = ({children} : ShoppingCartProps) => {
 
     const [quantity , setQuantity] = useState<CartsQuantity[]>([])
-    const [sideCart , setSideCart] = useState<SideCartState[]>([])
+    const [sideCart] = useState<SideCartState[]>([])
 
     const getItemQuantity = (id : number) =>{
         return quantity.find(item=>
